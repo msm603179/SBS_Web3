@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch문</title>
+    <script>
+        const menuNo = Number( prompt('메뉴번호를 입력하세요') )
+        let menu = ''
+        // switch( 표현식 ) { case 값 : ~ }
+        // : 표현식과 값이 일치하는 case 문으로 이동한다
+
+        // break
+        // : 현재 속한 제어문(조건문, 반복문) 을 벗어나는 키워드
+
+        switch (menuNo) {
+            case 1:
+                menu = '황금올리브 반반 치킨'
+                break;
+            case 2:
+                menu = '슈프림 양념치킨'
+                break;
+            case 3:
+                menu = '고추바사삭 치킨'
+                break;
+            case 4:
+                menu = '뿌링클 순살치킨'
+                break;
+            default:
+                alert('메뉴번호가 존재하지 않습니다')
+                break;
+        }
+        if( menuNo >= 1 && menuNo <=4 ){
+            alert(`${menu} 가 주문되었습니다 \n 30분내로 도착할 예정입니다`)
+        } else {
+            alert('주문에 실패하였습니다')
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
