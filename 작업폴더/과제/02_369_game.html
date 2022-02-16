@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lanumg="enum">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" conumtenumt="IE=edge">
+    <meta numame="viewport" conumtenumt="width=device-width, inumitial-scale=1.0">
+    <title>과제2번</title>
+    <!-- [과제 2번] - 3,6,9 게임
+         1~100 까지 반복을 하면서, 반복되는 숫자가 3 또는 6 또는 9 이면,
+         "*" 을 그 개수만큼 출력하고 그렇지 않으면, 그 숫자를 출력하는 프로그램을 완성하시오. 
+    -->
+    <script>
+
+        function game(){
+            for(let i=1; i<=100; i++){
+                let ten = parseInt(i/10);
+                let unit = i%10;
+
+                let tens = ten==3 || ten==6 || ten==9;
+                let units = unit==3 || unit==6 || unit==9;
+                if(tens && units){
+                    document.write('**')
+                }else if(tens || units){
+                    document.write('*')
+                }else{
+                    document.write(i)
+                }
+                document.write('<br>')
+            }
+            document.write(i)
+        }
+
+
+        game();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제1번</title>
+    <!-- [과제 1번]
+         양의 정수 N 을 입력받아, 아래와 같이 직각 삼각형을 "*" 로 출력하는 프로그램을 완성하시오.
+         (입력 예시 - prompt() )
+    -->
+    
+    <head>
+    <script>
+        let a = prompt('정수를 입력하시오')
+        num = Number(a)
+        
+        for( let i=0; i<num; i++){   
+            for(let k=4;k>i; k--){   
+                document.write('&nbsp')
+            }
+            for(let j=0; j<=i; j++){ 
+                document.write('*')
+            }
+            document.write('<br>')    
+        }
+        document.write(result)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
