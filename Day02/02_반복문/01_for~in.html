@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for ~ in 반복문</title>
+    <script>
+        // 배열 선언
+        const todoList = ['학원가기', '웹디 공부하기', '밥먹기', '낮잠자기', '치과가기']
+        // for (const [반복index] in [배열]) {}
+        // i : 반복변수 (0 ~ N-1) : index는 0부터 시작해서 n-1 이다
+        let a = 1;
+        for (const i in todoList ) {
+            console.log(`${Number(i)+1} 번 쨰 할 일 : ${todoList[i]}`)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
