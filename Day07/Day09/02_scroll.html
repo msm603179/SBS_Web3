@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <script>
+        
+        // 문서 컨텐츠의 크기
+        let innerWidth = window.innerWidth
+        let innerHeight = window.innerHeight
+
+        // 문서 전체 높이
+        let clienWidth
+        let clienHeight 
+
+        // 문서 준비 이벤트
+        document.addEventListener('DOMContentLoaded', () => {
+            /*
+                document.body.scrollWidth
+                document.body.scrollHeight
+                : 실제 컨텐츠 영역
+
+                document.documentElement.clienWidth
+                document.documentElement.clienHeight
+                : 실제 보여지고 있는 크기 *(스크롤바, 마진 제외)
+
+                documnet.documnetElement.offsetWidth
+                documnet.documnetElement.offsetHeight
+                : 스크롤바까지 포함한 영역의 크기
+            */
+            htmlWidth = document.body.scrollWidth
+            htmlHeight = document.body.scrollHeight
+
+            clienWidth = document.documentElement.clientWidth
+            clienHeight = document.documentElement.clientHeight
+
+            let box = document.getElementById('box')
+            let width = document.createElement('h1')
+            let height = document.createElement('h1')
+            let widthText = document.createTextNode(`페이지 전체 가로 크기 : ${htmlWidth}`)
+            let heightText = document.createTextNode(`페이지 전체 세로 크기 : ${htmlHeight}`)
+            
+            width.appendChild(widthText)
+            height.appendChild(heightText)
+
+            box.appendChild(width)
+            box.appendChild(height)
+         });
+
+
+        // 창에서 스크롤 시, 이벤트
+        window.addEventListener('scroll', function(event){
+            let scrollX = window.screenX
+            let screenY = window.screenY
+
+            console.log(`스크롤 X축 - 시작 위치 : ${scrollX}`)
+            console.log(`스크롤 Y축 - 시작 위치 : ${scrollY}`)
+            console.log(`스크롤 X축 - 끝 위치 : ${scrollX + innerWidth}`)
+            console.log(`스크롤 Y축 - 끝 위치 : ${scrollY + clienHeight}`)
+       })    
+
+       // 스크롤 시작점
+       
+        
+    </script>
+</head>
+<body>
+    <div style="height: 4000px; width: 4000px;"></div>
+    <div id="box"></div>
+</body>
+</html>
